@@ -1,0 +1,231 @@
+<project name="TPA Scheda classes" default="all" basedir=".">
+   <property file="${basedir}/ant.properties" />
+      <target name="cleansrc">
+  <!-- <delete dir="${srcdir}" />
+       <delete dir="${commondir}" />
+       <delete dir="${deploydir}" /> -->
+      </target>
+
+ <target name="getsource">
+<!--	  <exec dir="." executable="pcli" vmlauncher="false">
+            <arg value="get"/>
+            <arg value="-pr${PVCS_REPOSITORY}"/>
+            <arg value="-y"/>
+            <arg value="-g${PROMOTION_GROUP}"/>
+	    <arg value="-id${UIDPWD}"/>
+	    <arg value="-z"/>
+	    <arg value="-pp/"/>
+	    <arg value="TPASchedA"/>
+	    </exec>
+
+         <exec dir="." executable="pcli" vmlauncher="false">
+            <arg value="get"/>
+            <arg value="-pr${PVCS_REPOSITORY}"/>
+            <arg value="-y"/>
+            <arg value="-g${PROMOTION_GROUP}"/>
+	    <arg value="-id${UIDPWD}"/>
+	    <arg value="-z"/>
+	    <arg value="-pp/"/>
+	    <arg value="WeblogicSharedComponents"/>
+        </exec> -->
+
+    </target>
+<!--delete compiled code -->
+
+   <target name="clean">
+      <delete dir="${destdir}" />
+
+      <delete dir="${taglibclass}" />
+   </target>
+<!-- compile system-->
+   <target name="compile" depends="clean">
+      <mkdir dir="${destdir}" />
+      <javac srcdir="${srcdir}" destdir="${destdir}" debug="on" classpath="${srcdir}:$ANT_HOME/lib/ant.jar:$ANT_HOME/lib/optional.jar:${commondir}/${IService}:${commondir}/ids.jar:${commondir}/ifstags.jar:${commondir}/jconn2.jar:${commondir}/TPAHomeCA.jar:${commondir}/TPAHomeCAwsdl.jar:${commondir}/TPAHomeUtil.jar:${commondir}/weblogicaux.jar:${commondir}/jaxrpc.jar:${commondir}/saaj.jar:${commondir}/axis.jar:${commondir}/archiveWebserviceClient.jar" >
+         <exclude name="ServletExecDebuggerMain.java" />
+         <exclude name="Servlets/pagecompile/_jsp/*.*" />
+         <exclude name="org/**" />
+         <exclude name="is/**" />
+         <exclude name="app/tags/**" />
+      </javac>
+      <mkdir dir="${taglibclass}" />
+   </target>
+
+<!-- delete old war directory and jar-->
+
+   <target name="removejar">
+      <delete file="${applib}/tpascheda.jar" />
+      <delete dir="${deploydir}"/>
+   </target>
+
+<!-- build expanded web application-->
+   <target name="deploy"
+    depends="removejar,compile">
+      <mkdir dir="${applib}" />
+       <!-- create application jar-->
+      <jar jarfile="${applib}/tpascheda.jar" basedir="${destdir}" compress="no" />
+     	<!-- copy to web-inf/lib-->
+      	<copy todir="${deployapplib}">
+          <fileset dir="${applib}" />
+        </copy>
+
+ <!-- add weblogic configuration xml files for app-->
+      <copy todir="${deploydir}/WEB-INF">
+         <fileset dir="${srcINF}" />
+      </copy>
+
+       <!-- add cc.jsp -->
+
+      <copy
+       todir="${deploydir}/is">
+         <fileset
+          dir="${srcis}" />
+      </copy>
+
+	 <!-- add individual shared jar files needed by the application -->
+	 <!-- do not need db2java.. get from weblogic class path -->
+	 <!-- utility files -->
+      <copy
+       file="${commondir}/jconn2.jar"
+       tofile="${deployapplib}/jconn2.jar" />
+
+      <copy
+       file="${commondir}/ifstags.jar"
+       tofile="${deployapplib}/ifstags.jar" />
+
+
+        <copy
+       file="${commondir}/${IService}"
+       tofile="${deployapplib}/${IService}" />
+
+       <!-- our team shared files -->
+       <!-- new security files -->
+       <copy
+       file="${commondir}/TPAHomeCA.jar"
+       tofile="${deployapplib}/TPAHomeCA.jar" />
+       
+       <!-- <copy
+       file="${commondir}/TPAHomeCAWsdl.jar"
+       tofile="${deployapplib}/TPAHomeCAWsdl.jar" /> -->
+        <!-- end new security files -->
+        
+       
+        <!-- need to remove this -->
+          <copy
+       file="${commondir}/TPAHomeUtil.jar"
+       tofile="${deployapplib}/TPAHomeUtil.jar" />
+        <!-- need to remove this -->
+     
+
+     <copy
+       file="${commondir}/prdsaleswebutil.jar"
+       tofile="${deployapplib}/prdsaleswebutil.jar" />
+       
+       <copy
+             file="${commondir}/wsif.jar"
+             tofile="${deployapplib}/wsif.jar" />            
+      <copy
+             file="${commondir}/axis.jar"
+             tofile="${deployapplib}/axis.jar" />
+      
+      <copy
+             file="${commondir}/commons-discovery.jar"
+             tofile="${deployapplib}/commons-discovery.jar" />
+             
+      <copy
+             file="${commondir}/commons-logging.jar"
+             tofile="${deployapplib}/commons-logging.jar" />
+      
+      <copy
+       file="${commondir}/jaxrpc.jar"
+       tofile="${deployapplib}/jaxrpc.jar" />
+       
+            
+       <copy
+              file="${commondir}/saaj.jar"
+       tofile="${deployapplib}/saaj.jar" />
+       
+   	<copy
+   	              file="${commondir}/jaxws-rt.jar"
+   	       tofile="${deployapplib}/jaxws-rt.jar" />
+   	<copy
+   	              file="${commondir}/stax-ex.jar"
+   	       tofile="${deployapplib}/stax-ex.jar" />
+   	<copy
+   	              file="${commondir}/streambuffer.jar"
+   	       tofile="${deployapplib}/streambuffer.jar" />
+       
+        <copy
+                     file="${commondir}/wsdl4j.jar"
+              tofile="${deployapplib}/wsdl4j.jar" />
+		<copy
+                     file="${commondir}/archiveWebserviceClient.jar"
+              tofile="${deployapplib}/archiveWebserviceClient.jar" />
+<copy
+   	                     file="${commondir}/jaxb-api.jar"
+   	              tofile="${deployapplib}/jaxb-api.jar" />
+			
+   	<copy
+   	                     file="${commondir}/jaxb-impl.jar"
+   	              tofile="${deployapplib}/jaxb-impl.jar" />
+   	
+   	<copy
+   	                     file="${commondir}/jaxws-api.jar"
+   	              tofile="${deployapplib}/jaxws-api.jar" />
+   		
+   		<copy
+   		                     file="${commondir}/jsr181-api.jar"
+   		              tofile="${deployapplib}/jsr181-api.jar" />
+   		
+   		<copy
+   		                     file="${commondir}/saaj-api.jar"
+   		              tofile="${deployapplib}/saaj-api.jar" />
+   		
+   		<copy
+   		                     file="${commondir}/saaj-impl.jar"
+   		              tofile="${deployapplib}/saaj-impl.jar" />
+   		
+
+             <!-- end jars -->
+
+        <!-- copy images -->
+
+      <copy
+       todir="${deploydestimages}">
+         <fileset dir="${srcimages}" />
+      </copy>
+
+            <!-- copy jsp -->
+
+      <copy todir="${deploydestjsp}">
+         <fileset dir="${srcjsp}" />
+      </copy>
+
+      <copy todir="${deploydir}">
+	 <fileset dir="${srcjsp}" >
+		<include name="status.jsp"/>
+	 </fileset>
+      </copy>
+       <!-- is jsps .. primarily cc.jsp -->
+
+       <copy todir="${deploydir}/is">
+         <fileset dir="${commondir}/is" />
+      </copy>
+
+        <!-- everthing is in place, create war -->
+      <jar jarfile="${deploydir}/tpascheda.war" basedir="${deploydir}" compress="no" />
+   	<ear earfile="${deploydir}/tpascheda.ear" appxml="${commondir}/application.xml">
+      	  <fileset dir="${deploydir}" includes="tpascheda.war"/>
+   	  <fileset dir="${applib}" includes="tpascheda.jar"/>
+   	    </ear>
+   </target>
+
+   <target
+    name="all"
+    depends="cleansrc,getsource,clean,deploy">
+   </target>
+
+  <target
+    name="local"
+    depends="clean,deploy">
+   </target>
+</project>

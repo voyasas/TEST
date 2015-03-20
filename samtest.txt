@@ -1,0 +1,11 @@
+testing jenkins build
+testing polling
+testing simple cc
+test 3
+test auto build by email
+test auto build by email
+test auto build by email
+rebuild build request
+testing DevMain trigger build
+ devmain trigger build
+demo

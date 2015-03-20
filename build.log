@@ -1,0 +1,410 @@
+Detected Java version: 1.6 in: C:\jboss_ING\app\jvm\jdk1.6.0_07\jre
+Detected OS: Windows XP
+parsing buildfile C:\workspace\tpascheda\Build.xml with URI = file:/C:/workspace/tpascheda/Build.xml
+Project base dir set to: C:\workspace\tpascheda
+[antlib:org.apache.tools.ant] Could not load definitions from resource org/apache/tools/ant/antlib.xml. It could not be found.
+ [property] Loading C:\workspace\tpascheda\ant.properties
+Build sequence for target(s) `all' is [cleansrc, getsource, clean, removejar, compile, deploy, all]
+Complete build sequence is [cleansrc, getsource, clean, removejar, compile, deploy, all, local, ]
+
+cleansrc:
+
+getsource:
+     [exec] Current OS is Windows XP
+     [exec] Executing 'pcli' with arguments:
+     [exec] 'get'
+     [exec] '-pr//twrp-cam001/twrsalerep/pvcs/projectdbs/ProducerSvcsSales'
+     [exec] '-y'
+     [exec] '-gQA'
+     [exec] '-ids118962:'
+     [exec] '-z'
+     [exec] '-pp/'
+     [exec] 'TPASchedA'
+     [exec] 
+     [exec] The ' characters around the executable and arguments are
+     [exec] not part of the command.
+     [exec] 'pcli' is not recognized as an internal or external command,
+     [exec] operable program or batch file.
+     [exec] Result: 1
+     [exec] Current OS is Windows XP
+     [exec] Executing 'pcli' with arguments:
+     [exec] 'get'
+     [exec] '-pr//twrp-cam001/twrsalerep/pvcs/projectdbs/ProducerSvcsSales'
+     [exec] '-y'
+     [exec] '-gQA'
+     [exec] '-ids118962:'
+     [exec] '-z'
+     [exec] '-pp/'
+     [exec] 'WeblogicSharedComponents'
+     [exec] 
+     [exec] The ' characters around the executable and arguments are
+     [exec] not part of the command.
+     [exec] 'pcli' is not recognized as an internal or external command,
+     [exec] operable program or batch file.
+     [exec] Result: 1
+
+clean:
+   [delete] Deleting directory c:\batchbuild\TPASchedA\classes
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\data\SchedAArchiveEntry.class
+   [delete] Deleting directory c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\data
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\dataaccess\ensurePlanExist.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\dataaccess\GetArchiveExtraInfo.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\dataaccess\getCntPlanExact.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\dataaccess\getCntPlanPart.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\dataaccess\getPureCntPlanExact.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\dataaccess\getPureCntPlanPart.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\dataaccess\InsertArchiveExtraInfo.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\dataaccess\UpdateArchiveExtraInfo.class
+   [delete] Deleting directory c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\dataaccess
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\exceptions\NotAuthorized.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\exceptions\NoTPAException.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\exceptions\TimeoutException.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\exceptions\TPDupsException.class
+   [delete] Deleting directory c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\exceptions
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\mvc\RangeEntry5500_Bean.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\mvc\RangeEntry5500_BI.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\mvc\RangeEntry5500_PreDisplay.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\mvc\SelectArch5500_Bean.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\mvc\SelectArch5500_BI.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\mvc\SelectArch5500_PreDisplay.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\mvc\TPAArchPageInfo.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\mvc\TPASchedAComparator.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\mvc\TPASchedANumComparator.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\mvc\TPASchedARunComparator.class
+   [delete] Deleting directory c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\mvc
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\servlets\TPASchedABridgeServlet.class
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\servlets\TPASchedAPDFServlet.class
+   [delete] Deleting directory c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\servlets
+   [delete] Deleting c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\util\TPAViewComparator.class
+   [delete] Deleting directory c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda\util
+   [delete] Deleting directory c:\batchbuild\TPASchedA\classes\com\fs\app\tpascheda
+   [delete] Deleting directory c:\batchbuild\TPASchedA\classes\com\fs\app
+   [delete] Deleting directory c:\batchbuild\TPASchedA\classes\com\fs
+   [delete] Deleting directory c:\batchbuild\TPASchedA\classes\com
+   [delete] Deleting directory c:\batchbuild\TPASchedA\classes
+   [delete] Deleting directory c:\batchbuild\TPASchedA\taglibclass
+   [delete] Deleting directory c:\batchbuild\TPASchedA\taglibclass
+
+removejar:
+   [delete] Deleting: c:\batchbuild\TPASchedA\applib\tpascheda.jar
+   [delete] Deleting directory c:\batchbuild\TPASchedA\war
+   [delete] Deleting c:\batchbuild\TPASchedA\war\images\arrow_box_r.gif
+   [delete] Deleting c:\batchbuild\TPASchedA\war\images\arrow_orange_r.gif
+   [delete] Deleting c:\batchbuild\TPASchedA\war\images\btn_back.gif
+   [delete] Deleting c:\batchbuild\TPASchedA\war\images\btn_go.GIF
+   [delete] Deleting c:\batchbuild\TPASchedA\war\images\btn_next.gif
+   [delete] Deleting c:\batchbuild\TPASchedA\war\images\btn_previous.gif
+   [delete] Deleting c:\batchbuild\TPASchedA\war\images\btn_refresh.gif
+   [delete] Deleting c:\batchbuild\TPASchedA\war\images\btn_submit.gif
+   [delete] Deleting c:\batchbuild\TPASchedA\war\images\btn_view.gif
+   [delete] Deleting c:\batchbuild\TPASchedA\war\images\hdr_tpa_sublevel.jpg
+   [delete] Deleting c:\batchbuild\TPASchedA\war\images\ing_tpa_topbar.jpg
+   [delete] Deleting c:\batchbuild\TPASchedA\war\images\logo.gif
+   [delete] Deleting c:\batchbuild\TPASchedA\war\images\shim.gif
+   [delete] Deleting c:\batchbuild\TPASchedA\war\images\stop.gif
+   [delete] Deleting directory c:\batchbuild\TPASchedA\war\images
+   [delete] Deleting c:\batchbuild\TPASchedA\war\is\IServiceVer2.15JBoss.jar
+   [delete] Deleting directory c:\batchbuild\TPASchedA\war\is
+   [delete] Deleting c:\batchbuild\TPASchedA\war\jsp\AccessControl.jsp
+   [delete] Deleting c:\batchbuild\TPASchedA\war\jsp\error.jsp
+   [delete] Deleting c:\batchbuild\TPASchedA\war\jsp\handler.jsp
+   [delete] Deleting c:\batchbuild\TPASchedA\war\jsp\ifs.tld
+   [delete] Deleting c:\batchbuild\TPASchedA\war\jsp\prdsalestags.tld
+   [delete] Deleting c:\batchbuild\TPASchedA\war\jsp\range_entry_5500.jsp
+   [delete] Deleting c:\batchbuild\TPASchedA\war\jsp\select_arch_5500.jsp
+   [delete] Deleting c:\batchbuild\TPASchedA\war\jsp\style.css
+   [delete] Deleting c:\batchbuild\TPASchedA\war\jsp\test.jsp
+   [delete] Deleting c:\batchbuild\TPASchedA\war\jsp\tpafooter.html
+   [delete] Deleting directory c:\batchbuild\TPASchedA\war\jsp
+   [delete] Deleting c:\batchbuild\TPASchedA\war\tpascheda.war
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\archiveWebserviceClient.jar
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\axis.jar
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\commons-discovery.jar
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\commons-logging.jar
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\ifstags.jar
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\IServiceVer2.15JBoss.jar
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\jaxrpc.jar
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\jconn2.jar
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\prdsaleswebutil.jar
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\saaj.jar
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\TPAHomeCA.jar
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\TPAHomeCAWsdl.jar
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\TPAHomeUtil.jar
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\tpascheda.jar
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\wsdl4j.jar
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\lib\wsif.jar
+   [delete] Deleting directory c:\batchbuild\TPASchedA\war\WEB-INF\lib
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\web.xml
+   [delete] Deleting c:\batchbuild\TPASchedA\war\WEB-INF\weblogic.xml
+   [delete] Deleting directory c:\batchbuild\TPASchedA\war\WEB-INF
+   [delete] Deleting directory c:\batchbuild\TPASchedA\war
+
+compile:
+    [mkdir] Created dir: c:\batchbuild\TPASchedA\classes
+    [javac] com\fs\app\tpascheda\data\SchedAArchiveEntry.java added as com\fs\app\tpascheda\data\SchedAArchiveEntry.class doesn't exist.
+    [javac] com\fs\app\tpascheda\dataaccess\GetArchiveExtraInfo.java added as com\fs\app\tpascheda\dataaccess\GetArchiveExtraInfo.class doesn't exist.
+    [javac] com\fs\app\tpascheda\dataaccess\InsertArchiveExtraInfo.java added as com\fs\app\tpascheda\dataaccess\InsertArchiveExtraInfo.class doesn't exist.
+    [javac] com\fs\app\tpascheda\dataaccess\UpdateArchiveExtraInfo.java added as com\fs\app\tpascheda\dataaccess\UpdateArchiveExtraInfo.class doesn't exist.
+    [javac] com\fs\app\tpascheda\dataaccess\ensurePlanExist.java added as com\fs\app\tpascheda\dataaccess\ensurePlanExist.class doesn't exist.
+    [javac] com\fs\app\tpascheda\dataaccess\getCntPlanExact.java added as com\fs\app\tpascheda\dataaccess\getCntPlanExact.class doesn't exist.
+    [javac] com\fs\app\tpascheda\dataaccess\getCntPlanPart.java added as com\fs\app\tpascheda\dataaccess\getCntPlanPart.class doesn't exist.
+    [javac] com\fs\app\tpascheda\dataaccess\getPureCntPlanExact.java added as com\fs\app\tpascheda\dataaccess\getPureCntPlanExact.class doesn't exist.
+    [javac] com\fs\app\tpascheda\dataaccess\getPureCntPlanPart.java added as com\fs\app\tpascheda\dataaccess\getPureCntPlanPart.class doesn't exist.
+    [javac] com\fs\app\tpascheda\exceptions\NoTPAException.java added as com\fs\app\tpascheda\exceptions\NoTPAException.class doesn't exist.
+    [javac] com\fs\app\tpascheda\exceptions\NotAuthorized.java added as com\fs\app\tpascheda\exceptions\NotAuthorized.class doesn't exist.
+    [javac] com\fs\app\tpascheda\exceptions\TPDupsException.java added as com\fs\app\tpascheda\exceptions\TPDupsException.class doesn't exist.
+    [javac] com\fs\app\tpascheda\exceptions\TimeoutException.java added as com\fs\app\tpascheda\exceptions\TimeoutException.class doesn't exist.
+    [javac] com\fs\app\tpascheda\mvc\RangeEntry5500_BI.java added as com\fs\app\tpascheda\mvc\RangeEntry5500_BI.class doesn't exist.
+    [javac] com\fs\app\tpascheda\mvc\RangeEntry5500_Bean.java added as com\fs\app\tpascheda\mvc\RangeEntry5500_Bean.class doesn't exist.
+    [javac] com\fs\app\tpascheda\mvc\RangeEntry5500_PreDisplay.java added as com\fs\app\tpascheda\mvc\RangeEntry5500_PreDisplay.class doesn't exist.
+    [javac] com\fs\app\tpascheda\mvc\SelectArch5500_BI.java added as com\fs\app\tpascheda\mvc\SelectArch5500_BI.class doesn't exist.
+    [javac] com\fs\app\tpascheda\mvc\SelectArch5500_Bean.java added as com\fs\app\tpascheda\mvc\SelectArch5500_Bean.class doesn't exist.
+    [javac] com\fs\app\tpascheda\mvc\SelectArch5500_PreDisplay.java added as com\fs\app\tpascheda\mvc\SelectArch5500_PreDisplay.class doesn't exist.
+    [javac] com\fs\app\tpascheda\mvc\TPAArchPageInfo.java added as com\fs\app\tpascheda\mvc\TPAArchPageInfo.class doesn't exist.
+    [javac] com\fs\app\tpascheda\mvc\TPASchedAComparator.java added as com\fs\app\tpascheda\mvc\TPASchedAComparator.class doesn't exist.
+    [javac] com\fs\app\tpascheda\mvc\TPASchedANumComparator.java added as com\fs\app\tpascheda\mvc\TPASchedANumComparator.class doesn't exist.
+    [javac] com\fs\app\tpascheda\mvc\TPASchedARunComparator.java added as com\fs\app\tpascheda\mvc\TPASchedARunComparator.class doesn't exist.
+    [javac] com\fs\app\tpascheda\servlets\TPASchedABridgeServlet.java added as com\fs\app\tpascheda\servlets\TPASchedABridgeServlet.class doesn't exist.
+    [javac] com\fs\app\tpascheda\servlets\TPASchedAPDFServlet.java added as com\fs\app\tpascheda\servlets\TPASchedAPDFServlet.class doesn't exist.
+    [javac] com\fs\app\tpascheda\util\TPAViewComparator.java added as com\fs\app\tpascheda\util\TPAViewComparator.class doesn't exist.
+    [javac] Compiling 26 source files to c:\batchbuild\TPASchedA\classes
+    [javac] Using modern compiler
+dropping c:\ant\lib\optional.jar from path as it doesn't exist
+dropping C:\workspace\tpascheda\C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\optional.jar from path as it doesn't exist
+    [javac] Compilation arguments:
+    [javac] '-d'
+    [javac] 'c:\batchbuild\TPASchedA\classes'
+    [javac] '-classpath'
+    [javac] 'c:\batchbuild\TPASchedA\classes;C:\batchbuild\TPASchedA\tpascheda\source;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant.jar;c:\batchbuild\common\IServiceVer2.15JBoss.jar;c:\batchbuild\common\ids.jar;c:\batchbuild\common\ifstags.jar;c:\batchbuild\common\jconn2.jar;c:\batchbuild\common\TPAHomeCA.jar;c:\batchbuild\common\TPAHomeCAwsdl.jar;c:\batchbuild\common\TPAHomeUtil.jar;c:\batchbuild\common\weblogicaux.jar;c:\batchbuild\common\jaxrpc.jar;c:\batchbuild\common\saaj.jar;c:\batchbuild\common\axis.jar;c:\batchbuild\common\archiveWebserviceClient.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-launcher.jar;C:\workspace\tpascheda;C:\jboss_ING\app\jvm\jdk1.6.0_07\lib\tools.jar;C:\Infrastructure\NetComponents.jar;C:\Infrastructure\report11_pro.jar;C:\Infrastructure\report12_pro.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-antlr.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-apache-bcel.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-apache-bsf.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-apache-log4j.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-apache-oro.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-apache-regexp.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-apache-resolver.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-commons-logging.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-commons-net.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-jai.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-javamail.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-jdepend.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-jmf.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-jsch.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-junit.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-netrexx.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-nodeps.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-starteam.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-stylebook.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-swing.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-trax.jar;C:\eclipse\plugins\org.apache.ant_1.7.0.v200803061910\lib\ant-weblogic.jar'
+    [javac] '-sourcepath'
+    [javac] 'C:\batchbuild\TPASchedA\tpascheda\source'
+    [javac] '-g'
+    [javac] 
+    [javac] The ' characters around the executable and arguments are
+    [javac] not part of the command.
+    [javac] Files to be compiled:
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\data\SchedAArchiveEntry.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\dataaccess\GetArchiveExtraInfo.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\dataaccess\InsertArchiveExtraInfo.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\dataaccess\UpdateArchiveExtraInfo.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\dataaccess\ensurePlanExist.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\dataaccess\getCntPlanExact.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\dataaccess\getCntPlanPart.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\dataaccess\getPureCntPlanExact.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\dataaccess\getPureCntPlanPart.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\exceptions\NoTPAException.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\exceptions\NotAuthorized.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\exceptions\TPDupsException.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\exceptions\TimeoutException.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\mvc\RangeEntry5500_BI.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\mvc\RangeEntry5500_Bean.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\mvc\RangeEntry5500_PreDisplay.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\mvc\SelectArch5500_BI.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\mvc\SelectArch5500_Bean.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\mvc\SelectArch5500_PreDisplay.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\mvc\TPAArchPageInfo.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\mvc\TPASchedAComparator.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\mvc\TPASchedANumComparator.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\mvc\TPASchedARunComparator.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\servlets\TPASchedABridgeServlet.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\servlets\TPASchedAPDFServlet.java
+    [javac]     C:\batchbuild\TPASchedA\tpascheda\source\com\fs\app\tpascheda\util\TPAViewComparator.java
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [mkdir] Created dir: c:\batchbuild\TPASchedA\taglibclass
+
+deploy:
+    [mkdir] Skipping c:\batchbuild\TPASchedA\applib because it already exists.
+      [jar] Building jar: c:\batchbuild\TPASchedA\applib\tpascheda.jar
+      [jar] adding directory META-INF/
+      [jar] adding entry META-INF/MANIFEST.MF
+      [jar] adding directory com/
+      [jar] adding directory com/fs/
+      [jar] adding directory com/fs/app/
+      [jar] adding directory com/fs/app/tpascheda/
+      [jar] adding directory com/fs/app/tpascheda/data/
+      [jar] adding directory com/fs/app/tpascheda/dataaccess/
+      [jar] adding directory com/fs/app/tpascheda/exceptions/
+      [jar] adding directory com/fs/app/tpascheda/mvc/
+      [jar] adding directory com/fs/app/tpascheda/servlets/
+      [jar] adding directory com/fs/app/tpascheda/util/
+      [jar] adding entry com/fs/app/tpascheda/data/SchedAArchiveEntry.class
+      [jar] adding entry com/fs/app/tpascheda/dataaccess/GetArchiveExtraInfo.class
+      [jar] adding entry com/fs/app/tpascheda/dataaccess/InsertArchiveExtraInfo.class
+      [jar] adding entry com/fs/app/tpascheda/dataaccess/UpdateArchiveExtraInfo.class
+      [jar] adding entry com/fs/app/tpascheda/dataaccess/ensurePlanExist.class
+      [jar] adding entry com/fs/app/tpascheda/dataaccess/getCntPlanExact.class
+      [jar] adding entry com/fs/app/tpascheda/dataaccess/getCntPlanPart.class
+      [jar] adding entry com/fs/app/tpascheda/dataaccess/getPureCntPlanExact.class
+      [jar] adding entry com/fs/app/tpascheda/dataaccess/getPureCntPlanPart.class
+      [jar] adding entry com/fs/app/tpascheda/exceptions/NoTPAException.class
+      [jar] adding entry com/fs/app/tpascheda/exceptions/NotAuthorized.class
+      [jar] adding entry com/fs/app/tpascheda/exceptions/TPDupsException.class
+      [jar] adding entry com/fs/app/tpascheda/exceptions/TimeoutException.class
+      [jar] adding entry com/fs/app/tpascheda/mvc/RangeEntry5500_BI.class
+      [jar] adding entry com/fs/app/tpascheda/mvc/RangeEntry5500_Bean.class
+      [jar] adding entry com/fs/app/tpascheda/mvc/RangeEntry5500_PreDisplay.class
+      [jar] adding entry com/fs/app/tpascheda/mvc/SelectArch5500_BI.class
+      [jar] adding entry com/fs/app/tpascheda/mvc/SelectArch5500_Bean.class
+      [jar] adding entry com/fs/app/tpascheda/mvc/SelectArch5500_PreDisplay.class
+      [jar] adding entry com/fs/app/tpascheda/mvc/TPAArchPageInfo.class
+      [jar] adding entry com/fs/app/tpascheda/mvc/TPASchedAComparator.class
+      [jar] adding entry com/fs/app/tpascheda/mvc/TPASchedANumComparator.class
+      [jar] adding entry com/fs/app/tpascheda/mvc/TPASchedARunComparator.class
+      [jar] adding entry com/fs/app/tpascheda/servlets/TPASchedABridgeServlet.class
+      [jar] adding entry com/fs/app/tpascheda/servlets/TPASchedAPDFServlet.class
+      [jar] adding entry com/fs/app/tpascheda/util/TPAViewComparator.class
+     [copy] tpascheda.jar added as tpascheda.jar doesn't exist.
+     [copy]  added as  doesn't exist.
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\TPASchedA\applib\tpascheda.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\tpascheda.jar
+     [copy] web.xml added as web.xml doesn't exist.
+     [copy] weblogic.xml added as weblogic.xml doesn't exist.
+     [copy]  omitted as c:\batchbuild\TPASchedA\war\WEB-INF is up to date.
+     [copy] Copying 2 files to c:\batchbuild\TPASchedA\war\WEB-INF
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\WEB-INF\web.xml to c:\batchbuild\TPASchedA\war\WEB-INF\web.xml
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\WEB-INF\weblogic.xml to c:\batchbuild\TPASchedA\war\WEB-INF\weblogic.xml
+     [copy] IServiceVer2.15JBoss.jar added as IServiceVer2.15JBoss.jar doesn't exist.
+     [copy]  added as  doesn't exist.
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\is
+     [copy] Copying c:\batchbuild\common\is\IServiceVer2.15JBoss.jar to c:\batchbuild\TPASchedA\war\is\IServiceVer2.15JBoss.jar
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\common\jconn2.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\jconn2.jar
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\common\ifstags.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\ifstags.jar
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\common\IServiceVer2.15JBoss.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\IServiceVer2.15JBoss.jar
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\common\TPAHomeCA.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\TPAHomeCA.jar
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\common\TPAHomeCAWsdl.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\TPAHomeCAWsdl.jar
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\common\TPAHomeUtil.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\TPAHomeUtil.jar
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\common\prdsaleswebutil.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\prdsaleswebutil.jar
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\common\wsif.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\wsif.jar
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\common\axis.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\axis.jar
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\common\commons-discovery.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\commons-discovery.jar
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\common\commons-logging.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\commons-logging.jar
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\common\jaxrpc.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\jaxrpc.jar
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\common\saaj.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\saaj.jar
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\common\wsdl4j.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\wsdl4j.jar
+     [copy] Copying 1 file to c:\batchbuild\TPASchedA\war\WEB-INF\lib
+     [copy] Copying c:\batchbuild\common\archiveWebserviceClient.jar to c:\batchbuild\TPASchedA\war\WEB-INF\lib\archiveWebserviceClient.jar
+     [copy] arrow_box_r.gif added as arrow_box_r.gif doesn't exist.
+     [copy] arrow_orange_r.gif added as arrow_orange_r.gif doesn't exist.
+     [copy] btn_back.gif added as btn_back.gif doesn't exist.
+     [copy] btn_go.GIF added as btn_go.GIF doesn't exist.
+     [copy] btn_next.gif added as btn_next.gif doesn't exist.
+     [copy] btn_previous.gif added as btn_previous.gif doesn't exist.
+     [copy] btn_refresh.gif added as btn_refresh.gif doesn't exist.
+     [copy] btn_submit.gif added as btn_submit.gif doesn't exist.
+     [copy] btn_view.gif added as btn_view.gif doesn't exist.
+     [copy] hdr_tpa_sublevel.jpg added as hdr_tpa_sublevel.jpg doesn't exist.
+     [copy] ing_tpa_topbar.jpg added as ing_tpa_topbar.jpg doesn't exist.
+     [copy] logo.gif added as logo.gif doesn't exist.
+     [copy] shim.gif added as shim.gif doesn't exist.
+     [copy] stop.gif added as stop.gif doesn't exist.
+     [copy]  added as  doesn't exist.
+     [copy] Copying 14 files to c:\batchbuild\TPASchedA\war\images
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\images\btn_next.gif to c:\batchbuild\TPASchedA\war\images\btn_next.gif
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\images\shim.gif to c:\batchbuild\TPASchedA\war\images\shim.gif
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\images\btn_submit.gif to c:\batchbuild\TPASchedA\war\images\btn_submit.gif
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\images\stop.gif to c:\batchbuild\TPASchedA\war\images\stop.gif
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\images\btn_refresh.gif to c:\batchbuild\TPASchedA\war\images\btn_refresh.gif
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\images\logo.gif to c:\batchbuild\TPASchedA\war\images\logo.gif
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\images\ing_tpa_topbar.jpg to c:\batchbuild\TPASchedA\war\images\ing_tpa_topbar.jpg
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\images\btn_back.gif to c:\batchbuild\TPASchedA\war\images\btn_back.gif
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\images\btn_go.GIF to c:\batchbuild\TPASchedA\war\images\btn_go.GIF
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\images\hdr_tpa_sublevel.jpg to c:\batchbuild\TPASchedA\war\images\hdr_tpa_sublevel.jpg
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\images\btn_view.gif to c:\batchbuild\TPASchedA\war\images\btn_view.gif
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\images\arrow_box_r.gif to c:\batchbuild\TPASchedA\war\images\arrow_box_r.gif
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\images\btn_previous.gif to c:\batchbuild\TPASchedA\war\images\btn_previous.gif
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\images\arrow_orange_r.gif to c:\batchbuild\TPASchedA\war\images\arrow_orange_r.gif
+     [copy] AccessControl.jsp added as AccessControl.jsp doesn't exist.
+     [copy] error.jsp added as error.jsp doesn't exist.
+     [copy] handler.jsp added as handler.jsp doesn't exist.
+     [copy] ifs.tld added as ifs.tld doesn't exist.
+     [copy] prdsalestags.tld added as prdsalestags.tld doesn't exist.
+     [copy] range_entry_5500.jsp added as range_entry_5500.jsp doesn't exist.
+     [copy] select_arch_5500.jsp added as select_arch_5500.jsp doesn't exist.
+     [copy] style.css added as style.css doesn't exist.
+     [copy] test.jsp added as test.jsp doesn't exist.
+     [copy] tpafooter.html added as tpafooter.html doesn't exist.
+     [copy]  added as  doesn't exist.
+     [copy] Copying 10 files to c:\batchbuild\TPASchedA\war\jsp
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\jsp\tpafooter.html to c:\batchbuild\TPASchedA\war\jsp\tpafooter.html
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\jsp\error.jsp to c:\batchbuild\TPASchedA\war\jsp\error.jsp
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\jsp\prdsalestags.tld to c:\batchbuild\TPASchedA\war\jsp\prdsalestags.tld
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\jsp\handler.jsp to c:\batchbuild\TPASchedA\war\jsp\handler.jsp
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\jsp\style.css to c:\batchbuild\TPASchedA\war\jsp\style.css
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\jsp\select_arch_5500.jsp to c:\batchbuild\TPASchedA\war\jsp\select_arch_5500.jsp
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\jsp\test.jsp to c:\batchbuild\TPASchedA\war\jsp\test.jsp
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\jsp\ifs.tld to c:\batchbuild\TPASchedA\war\jsp\ifs.tld
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\jsp\range_entry_5500.jsp to c:\batchbuild\TPASchedA\war\jsp\range_entry_5500.jsp
+     [copy] Copying C:\batchbuild\TPASchedA\tpascheda\tpascheda\jsp\AccessControl.jsp to c:\batchbuild\TPASchedA\war\jsp\AccessControl.jsp
+     [copy] IServiceVer2.15JBoss.jar omitted as c:\batchbuild\TPASchedA\war\is\IServiceVer2.15JBoss.jar is up to date.
+     [copy]  omitted as c:\batchbuild\TPASchedA\war\is is up to date.
+      [jar] Building jar: c:\batchbuild\TPASchedA\war\tpascheda.war
+      [jar] adding directory META-INF/
+      [jar] adding entry META-INF/MANIFEST.MF
+      [jar] adding directory WEB-INF/
+      [jar] adding directory WEB-INF/lib/
+      [jar] adding directory images/
+      [jar] adding directory is/
+      [jar] adding directory jsp/03:22 PM 10/02/200903:22 PM 10/02/200903:22 PM 10/02/2009
+      [jar] adding entry WEB-INF/lib/IServiceVer2.15JBoss.jar
+      [jar] adding entry WEB-INF/lib/TPAHomeCA.jar
+      [jar] adding entry WEB-INF/lib/TPAHomeCAWsdl.jar
+      [jar] adding entry WEB-INF/lib/TPAHomeUtil.jar
+      [jar] adding entry WEB-INF/lib/archiveWebserviceClient.jar
+      [jar] adding entry WEB-INF/lib/axis.jar
+      [jar] adding entry WEB-INF/lib/commons-discovery.jar
+      [jar] adding entry WEB-INF/lib/commons-logging.jar
+      [jar] adding entry WEB-INF/lib/ifstags.jar
+      [jar] adding entry WEB-INF/lib/jaxrpc.jar
+      [jar] adding entry WEB-INF/lib/jconn2.jar
+      [jar] adding entry WEB-INF/lib/prdsaleswebutil.jar
+      [jar] adding entry WEB-INF/lib/saaj.jar
+      [jar] adding entry WEB-INF/lib/tpascheda.jar
+      [jar] adding entry WEB-INF/lib/wsdl4j.jar
+      [jar] adding entry WEB-INF/lib/wsif.jar
+      [jar] adding entry WEB-INF/web.xml
+      [jar] adding entry WEB-INF/weblogic.xml
+      [jar] adding entry images/arrow_box_r.gif
+      [jar] adding entry images/arrow_orange_r.gif
+      [jar] adding entry images/btn_back.gif
+      [jar] adding entry images/btn_go.GIF
+      [jar] adding entry images/btn_next.gif
+      [jar] adding entry images/btn_previous.gif
+      [jar] adding entry images/btn_refresh.gif
+      [jar] adding entry images/btn_submit.gif
+      [jar] adding entry images/btn_view.gif
+      [jar] adding entry images/hdr_tpa_sublevel.jpg
+      [jar] adding entry images/ing_tpa_topbar.jpg
+      [jar] adding entry images/logo.gif
+      [jar] adding entry images/shim.gif
+      [jar] adding entry images/stop.gif
+      [jar] adding entry is/IServiceVer2.15JBoss.jar
+      [jar] adding entry jsp/AccessControl.jsp
+      [jar] adding entry jsp/error.jsp
+      [jar] adding entry jsp/handler.jsp
+      [jar] adding entry jsp/ifs.tld
+      [jar] adding entry jsp/prdsalestags.tld
+      [jar] adding entry jsp/range_entry_5500.jsp
+      [jar] adding entry jsp/select_arch_5500.jsp
+      [jar] adding entry jsp/style.css
+      [jar] adding entry jsp/test.jsp
+      [jar] adding entry jsp/tpafooter.html
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 7 seconds

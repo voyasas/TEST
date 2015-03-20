@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<configInfo>
+   <section
+    name="iserrorfile"
+    file="iserror.jsp" />
+
+   <section
+    name="log"
+    appname="TPASCHEDA">
+      <mode
+       name="error"
+       status="on"
+       out="file"
+       file="../log/logError_SchedA.txt" />
+
+      <mode
+       name="warning"
+       status="on"
+       out="file"
+       file="../log/logWarning_SchedA.txt" />
+
+      <mode
+       name="debug"
+       status="on"
+       out="file"
+       file="../log/logDebug_SchedA.txt" />
+   </section>
+
+    <section name="security">
+    <role name="rolenames"
+     role1="Guest" />
+</section>
+
+<section name="infrastructure">
+  <component name="userprofile"
+      class="com.fs.is.user.GuestUserProfile" />
+</section>
+
+   
+
+   <section
+    name="protocol">
+      <protocol
+       name="class"
+       implementation="com.fs.is.cmd.loader.ClassLoaderProtocol" />
+
+      <protocol
+       name="EJB"
+       implementation="com.fs.is.cmd.rmi.RMICommProtocol"
+       host="jnp://localhost"
+       ContextFactory="org.jnp.interfaces.NamingContextFactory" />
+
+      <protocol
+       name="HTTP"
+       implementation="com.fs.is.cmd.http.HTTPCommProtocol" />
+   </section>
+
+   <section
+    name="DISPLAY">
+      <Constant
+       name="MAXIMUM_SEARCH_LIST"
+       max="50" />
+
+      <Constant
+       name="SCHEDA"
+       max="25"
+       months="3" />
+   </section>
+
+<section name="pdf">
+   <Constant name="file1" site="C://Development/install/friday.pdf" />
+</section>
+
+   <section
+    name="IDS"
+    processor="com.fs.is.cmd.loader.ServiceClass"
+    protocol="class">
+	<verb
+	       name="ensurePlanExist"
+	       processor="com.fs.app.tpascheda.dataaccess.ensurePlanExist"
+	       protocol="class"
+       datasource="TPASupport" />
+       
+
+       <verb
+       name="getPureCntPlanExact"
+       processor="com.fs.app.tpascheda.dataaccess.getPureCntPlanExact"
+       protocol="class"
+       datasource="TPASupport" />
+       
+        <verb
+       name="getPureCntPlanPart"
+       processor="com.fs.app.tpascheda.dataaccess.getPureCntPlanPart"
+       protocol="class"
+       datasource="TPASupport" />
+
+        <verb
+       name="getCntPlanExact"
+       processor="com.fs.app.tpascheda.dataaccess.getCntPlanExact"
+       protocol="class"
+       datasource="TPASupport" />
+
+        <verb
+       name="getCntPlanPart"
+       processor="com.fs.app.tpascheda.dataaccess.getCntPlanPart"
+       protocol="class"
+       datasource="TPASupport" />
+
+           <verb
+       name="GetArchiveExtraInfo"
+       processor="com.fs.app.tpascheda.dataaccess.GetArchiveExtraInfo"
+       protocol="class"
+       datasource="TPASupport" />
+
+       <verb
+       name="InsertArchiveExtraInfo"
+       processor="com.fs.app.tpascheda.dataaccess.InsertArchiveExtraInfo"
+       protocol="class"
+       datasource="TPASupport" />
+
+       <verb
+       name="UpdateArchiveExtraInfo"
+       processor="com.fs.app.tpascheda.dataaccess.UpdateArchiveExtraInfo"
+       protocol="class"
+       datasource="TPASupport" />
+
+
+   </section>
+
+   <section
+    name="DBProperties">
+      <datasource
+       name="TPASupport"
+       implementation="com.fs.is.dataaccess.WLConnectionGetter"
+       initialcontextfactory="org.jnp.interfaces.NamingContextFactory"
+       weblogicconnectionname="jnp://localhost"
+       datasourcename="java:TPASupportDataSource" />
+   </section>
+
+   <section
+    name="MVC"
+    StartPage="RANGE_ENTRY_5500">
+     <page
+       name="RANGE_ENTRY_5500"
+       bean="com.fs.app.tpascheda.mvc.RangeEntry5500_Bean"
+       class="com.fs.app.tpascheda.mvc.RangeEntry5500_PreDisplay"
+       page="range_entry_5500.jsp"
+       errorPage="RANGE_ENTRY_5500" />
+
+     <page.action
+       name="RANGE_ENTRY_5500.btnSubmit"
+       bean="com.fs.app.tpascheda.mvc.RangeEntry5500_Bean"
+       class="com.fs.app.tpascheda.mvc.RangeEntry5500_BI"
+       page="error.jsp" />
+
+     <page
+       name="SELECT_ARCH_5500"
+       bean="com.fs.app.tpascheda.mvc.SelectArch5500_Bean"
+       class="com.fs.app.tpascheda.mvc.SelectArch5500_PreDisplay"
+       page="select_arch_5500.jsp"
+       errorPage="SELECT_ARCH_5500" />
+
+     <page.action
+       name="SELECT_ARCH_5500.btnBack"
+       bean="com.fs.app.tpascheda.mvc.SelectArch5500_Bean"
+       class="com.fs.app.tpascheda.mvc.SelectArch5500_BI"
+       page="error.jsp" />
+
+       <page.action
+       name="SELECT_ARCH_5500.jump"
+       bean="com.fs.app.tpascheda.mvc.SelectArch5500_Bean"
+       class="com.fs.app.tpascheda.mvc.SelectArch5500_BI"
+       page="error.jsp" />
+
+       <page.action
+       name="SELECT_ARCH_5500.nxtpage"
+       bean="com.fs.app.tpascheda.mvc.SelectArch5500_Bean"
+       class="com.fs.app.tpascheda.mvc.SelectArch5500_BI"
+       page="error.jsp" />
+
+      <page.action
+       name="SELECT_ARCH_5500.prevpage"
+       bean="com.fs.app.tpascheda.mvc.SelectArch5500_Bean"
+       class="com.fs.app.tpascheda.mvc.SelectArch5500_BI"
+       page="error.jsp" />
+
+       <page.action
+       name="SELECT_ARCH_5500.btnView"
+       bean="com.fs.app.tpascheda.mvc.SelectArch5500_Bean"
+       class="com.fs.app.tpascheda.mvc.SelectArch5500_BI"
+       page="error.jsp" />
+
+ <page.action
+       name="SELECT_ARCH_5500.sortdate"
+       bean="com.fs.app.tpascheda.mvc.SelectArch5500_Bean"
+       class="com.fs.app.tpascheda.mvc.SelectArch5500_BI"
+       page="error.jsp" />
+
+       <page.action
+       name="SELECT_ARCH_5500.sortNum"
+       bean="com.fs.app.tpascheda.mvc.SelectArch5500_Bean"
+       class="com.fs.app.tpascheda.mvc.SelectArch5500_BI"
+       page="error.jsp" />
+   </section>
+
+   <section
+    name="archive"
+    processor="http://ingna.americas.intranet/ArchiveServlet"
+    protocol="HTTP">
+   </section>
+
+<section name="ARCHIVESERVICE_PROPERTIES">
+<Constant name="ArchiveServiceURL" value="http://ingna.americas.intranet/ArchiveService/services/ArchiveWebservice"/>
+<Constant name="ArchiveServiceID" value="s610147"/>
+<Constant name="ArchiveServicePassword" value="Zirbel12"/>
+<Constant name="ArchiveServiceTimeOut" value="30000"/>
+<Constant name="Arch5500Folder" value="TPA"/>
+<Constant name="Arch5500OnDemandUserID" value="TPA"/>
+<Constant name="OnDemandEncryptedPassword" value="y1Nmbl5YAzQ="/>
+<Constant name="enterprise_tpa_authentication_directory_ClientURLType" value="SSO" />
+<Constant name="Enterprise_GWAN_Authentication_ClientURLType" value="CAA" />
+</section>
+
+<section name="5500_MESSAGES">
+<Constant name="TOP_MESSAGE" value=""/>
+</section>
+
+</configInfo>
+
